@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://localhost/AccountLibrary.API",
+      "applicationUrl": "http://localhost/DebitService.API",
       "sslPort": 0
     },
     "iisExpress": {
@@ -20,7 +20,7 @@
       },
       "applicationUrl": "http://localhost:51044"
     },
-    "AccountLibrary.API": {
+    "DebitService.API": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "api/values",

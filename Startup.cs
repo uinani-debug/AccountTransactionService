@@ -1,5 +1,5 @@
 using AutoMapper;
-using AccountLibrary.API.Services;
+using DebitLibrary.API.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -11,7 +11,7 @@ using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json.Serialization;
 using System;
 
-namespace AccountLibrary.API
+namespace DebitLibrary.API
 {
     public class Startup
     {
@@ -75,7 +75,7 @@ namespace AccountLibrary.API
                         (context is ControllerContext ||
                          actionExecutingContext?.ActionArguments.Count == context.ActionDescriptor.Parameters.Count))
                     {
-                        problemDetails.Type = "https://AccountLibrary.com/modelvalidationproblem";
+                        problemDetails.Type = "https://DebitLibrary.com/modelvalidationproblem";
                         problemDetails.Status = StatusCodes.Status422UnprocessableEntity;
                         problemDetails.Title = "One or more validation errors occurred.";
 
@@ -98,7 +98,7 @@ namespace AccountLibrary.API
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddScoped<IAccountLibraryRepository, AccountLibraryRepository>();
+            services.AddScoped<IDebitLibraryRepository, DebitLibraryRepository>();
                        
         }
 

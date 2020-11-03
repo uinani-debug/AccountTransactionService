@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using System;
 
-namespace AccountLibrary.API
+namespace DebitLibrary.API
 {
     public class Program
     {

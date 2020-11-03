@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AccountLibrary.API.Models
+namespace DebitLibrary.API.Models
 {
     public class Transaction
     {
