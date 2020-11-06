@@ -8,7 +8,7 @@ phases:
       - aws --version
       - $(aws ecr get-login --no-include-email --region us-east-2 )
       - REPOSITORY_URI=934139732129.dkr.ecr.us-east-2.amazonaws.com/mae-account_transaction_service
-      - IMG_VERSION=0.0.1
+      - IMG_VERSION=0.1.0
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=build-$IMG_VERSION
       - APP_PORT=80
