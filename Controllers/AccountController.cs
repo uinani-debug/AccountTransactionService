@@ -30,7 +30,7 @@ namespace AccountLibrary.API.Controllers
         }
 
 
-        [Route("api/v1/AccountTransaction")]
+        [Route("accountTransactionService/api/v1/AccountTransaction")]
         [HttpGet]
         public ActionResult<Transaction> AccountTransaction(string AccountNumber)
         {
@@ -44,7 +44,12 @@ namespace AccountLibrary.API.Controllers
             return Ok((_mapper.Map<IEnumerable<Entities.AccountTransaction>, IEnumerable<Transaction>>(accountrepo)));
         }
 
-
+        [Route("health")]
+        [HttpGet]
+        public ActionResult health()
+        {
+            return Ok();
+        }
 
         public override ActionResult ValidationProblem(
             [ActionResultObjectValue] ModelStateDictionary modelStateDictionary)

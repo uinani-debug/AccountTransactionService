@@ -19,9 +19,6 @@ namespace AccountLibrary.API.Services
         private IDbConnection Connection => new OracleConnection(connstring);
         public AccountLibraryRepository()
         {
-
-            //  connstring = "Server=192.168.0.164;Database=maecbsdb;user=SA;Password=TCSuser1123;Trusted_Connection=True;";
-          //  connstring = "Server=192.168.0.164;Database=maecbsdb;user=SA;Password=TCSuser1123;";
             connstring = "User Id=maeadmin;Password =Pa55w0rd;" +
                 "Data Source= 192.168.0.172:1521/orclpdb1";
         }
